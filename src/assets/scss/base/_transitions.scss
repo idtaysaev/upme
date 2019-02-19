@@ -1,0 +1,76 @@
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.page-enter,
+.page-leave-active {
+  opacity: 0
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0
+}
+
+.slide-down-enter-active,
+.slide-down-leave-active {
+  transition: all 1s ease;
+  overflow: hidden;
+}
+
+.slide-down-enter-active {
+  max-height: 200px;
+}
+
+.slide-down-enter,
+.slide-down-leave-active {
+  max-height: 0;
+}
+
+.slide-down-leave {
+  max-height: 200px;
+}
+
+// .slide-down-enter,
+// .slide-down-leave-active {
+//   max-height: 0;
+// }
+
+.appear-enter-active,
+.appear-leave-active {
+  transition: all 0.3s ease;
+}
+
+.appear-enter,
+.appear-leave-active {
+  opacity: 0;
+  transform: translate3d(0, 1em, 0);
+}
+
+.check-inst-enter-active,
+.check-inst-leave-active {
+  transition: all 3s ease;
+  overflow: hidden;
+}
+
+.check-inst-enter-active {
+  max-height: 1000px;
+  opacity: 1;
+}
+
+.check-inst-enter,
+.check-inst-leave-active {
+  max-height: 0;
+  opacity: 0;
+}
+
+.check-inst-leave {
+  max-height: 1000px;
+  opacity: 1;
+}

@@ -1,0 +1,63 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+	from {
+		transform: translate3d(0, 2em, 0);
+	}
+	to {
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@keyframes bouncing {
+	from {
+		transform: translate3d(0, 10px, 0) scale(1.2, 0.85);
+	}
+	to {
+		transform: translate3d(0, -20px, 0) scale(0.9, 1.1);
+	}
+}
+
+@keyframes patrolling {
+  from {
+    left: 17px;
+  }
+  50% {
+    left: 100%;
+    left: calc(100% - 17px);
+  }
+  to {
+    left: 17px;
+  }
+}
+
+@keyframes check-bounce {
+  from {
+    transform: translate3d(50%, 0, 0) scaleX(2) rotate(90deg);
+  }
+  50% {
+    transform: translate3d(50%, 10%, 0) scaleX(2) rotate(90deg);
+  }
+  to {
+    transform: translate3d(50%, 0, 0) scaleX(2) rotate(90deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+  // to {
+  //   transform: rotate(0);
+  // }
+}

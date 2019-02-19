@@ -1,0 +1,35 @@
+// Breakpoints
+$breakpoints: ( "xx-small": 379px, "x-small": 479px, "xs-small": 579px, "small": 767px, "medium": 992px, "large": 1280px, "x-large": 1640px);
+/// Mixin helps to use media query
+///
+/// @access public
+///
+/// @param {String} $breakpoint - breakpoint from $breakpoints
+///
+/// @require {Map} $breakpoints - map with breakpoint values
+///
+/// @example scss
+/// .container {
+///     @include respond-to(medium) {
+///       width: 768px;
+///     }
+///     @include respond-to(large) {
+///       width: 992px;
+///     }
+/// }
+///
+@mixin respond-to($breakpoint, $direction: min) {
+  $total-breakpoint: 0;
+  @if map-has-key($breakpoints, $breakpoint) {
+    $total-breakpoint: map-get($breakpoints, $breakpoint);
+  }
+  @else {
+    $total-breakpoint: $breakpoint;
+  }
+  @if $direction == max {
+    $total-breakpoint: $total-breakpoint - 1;
+  }
+  @media (#{$direction}-width: #{$total-breakpoint}) {
+    @content;
+  }
+}
