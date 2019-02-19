@@ -1,5 +1,7 @@
 # upme
 
+The main feature of the service is Account page. Enter any data in 2 fields in login page to get access for Account.
+
 ## Project setup
 ```
 yarn install
